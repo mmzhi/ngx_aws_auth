@@ -582,7 +582,7 @@ ngx_http_aws_auth_variable_s3(ngx_http_request_t *r, ngx_http_variable_value_t *
     }
     *(str_to_sign+offset) = '\0';
 
-    ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,"String to sign:%s",str_to_sign);
+    ngx_log_error(NGX_LOG_DEBUG, r->connection->log, 0,"String to sign:%s",str_to_sign);
 
 
     if (evp_md==NULL)
